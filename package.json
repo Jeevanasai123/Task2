@@ -1,0 +1,14 @@
+{
+  "name": "royal-feast",
+  "version": "1.0.0",
+  "scripts": {
+  "dev": "vite",
+  "build": "node build.js && vite build",
+  "render-njk": "node build.js",
+  "preview": "vite preview"
+},
+  "dependencies": {
+    "nunjucks": "^3.2.4",
+    "vite": "^5.0.0"
+  }
+}

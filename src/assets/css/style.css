@@ -1,0 +1,233 @@
+:root {
+  --accent: #f3c677;
+  --muted: rgba(255,255,255,0.85);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: var(--muted);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: #111;
+}
+
+/* ===== BACKGROUND LAYERS ===== */
+.bg-layer {
+  position: fixed;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1200ms ease-in-out, opacity 1200ms ease-in-out;
+  z-index: -3;
+  filter: blur(4px) saturate(1.05);
+  animation: kenburns 20s ease-in-out infinite alternate;
+}
+
+@keyframes kenburns {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.6) 100%);
+}
+
+.vignette {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 40%, rgba(0,0,0,0.35) 100%);
+}
+
+/* ===== NAVBAR ===== */
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.6px;
+}
+
+.nav-link {
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent) !important;
+  transform: translateY(-2px);
+}
+
+.navbar-brand:hover {
+  color: var(--accent) !important;
+}
+
+.navbar .btn-outline-light:hover {
+  background-color: var(--accent);
+  color: #000 !important;
+  border-color: var(--accent);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 1rem 4rem;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.1rem;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 1rem 0 2rem;
+}
+
+/* ===== MENU SECTION ===== */
+.menu-section {
+  padding: 60px 0;
+}
+
+.menu-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 230px;       /* fixed height for all images */
+  object-fit: cover;   /* crop images to fill */
+}
+
+.menu-card .card-body {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-card .card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.menu-card .price {
+  font-weight: bold;
+  color: #d9534f;
+  margin-top: 10px;
+}
+
+/* ===== ABOUT SECTION ===== */
+#about {
+  padding: 60px 0;
+}
+
+#about img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ===== TESTIMONIALS ===== */
+.testimonial-card {
+  background: rgba(0,0,0,0.45);
+  padding: 20px;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* ===== RESERVATION FORM ===== */
+#reserveForm input,
+#reserveForm select,
+#reserveForm button {
+  border-radius: 5px;
+}
+
+#reserveForm button {
+  background-color: #d9534f;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+#reserveForm button:hover {
+  background-color: #c9302c;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  padding: 2rem 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.2));
+  text-align: center;
+}
+
+footer a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+p, li {
+  font-family: 'Inter', sans-serif;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .menu-card img {
+    height: 200px;
+  }
+
+  .testimonial-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  #about img {
+    height: 200px;
+  }
+}

@@ -1,0 +1,214 @@
+{% extends "layout.njk" %}
+
+{% block title %}Royal Feast — Where Taste Meets Royalty{% endblock %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="hero text-white" style="background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=1600'); background-size: cover; background-position: center; height: 90vh;">
+  <div class="d-flex flex-column justify-content-center align-items-center h-100 text-center">
+    <h1 class="fw-bold">Royal Feast</h1>
+    <p class="lead fw-bold">Where Taste Meets Royalty — handcrafted dishes and a dining experience worthy of a crown.</p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="#menu" class="btn btn-lg btn-light text-dark">Explore Menu</a>
+      <a href="#reserve" class="btn btn-lg btn-outline-light">Reserve Table</a>
+      <a href="#menu" class="btn btn-lg btn-outline-light">Order Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- MENU SECTION -->
+<section id="menu" class="py-5 bg-dark">
+  <div class="container">
+    <h2 class="text-center text-white mb-4">Our Menu</h2>
+    <p class="text-center text-white mb-5">A curated selection of appetizers, mains and desserts — classic flavours with a modern touch.</p>
+    <div class="row g-4">
+
+       <div class="col-md-6 col-lg-4">
+          <div class="card menu-card p-3 h-100">
+          <img src="https://media.istockphoto.com/id/2157580729/photo/grilled-steak-and-foie-gras-on-a-white-plate-on-a-table-in-a-hotel-restaurant.webp?a=1&s=612x612&w=0&k=20&c=LK1_UO5QxGFojnL6DkAemq5rDEBci-NTriMAK1HhtH0=" class="card-img-top" alt="Seared Sea Bass">
+            <div class="card-body">
+              <h5 class="card-title text-white">Truffle Fettuccine</h5>
+              <p class="small">Creamy truffle sauce, parmesan, chive oil.</p>
+              <div class="d-flex justify-content-between">
+                <strong>₹299</strong>
+                <a class="btn btn-sm btn-outline-light" href="#">Add</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+
+       <div class="col-md-6 col-lg-4">
+          <div class="card menu-card p-3 h-100">
+          <img src="https://images.unsplash.com/photo-1677743536181-11dfdd93a77b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D" class="card-img-top" alt="Seared Sea Bass">
+            <div class="card-body">
+              <h5 class="card-title text-white">Truffle Fettuccine</h5>
+              <p class="small">Creamy truffle sauce, parmesan, chive oil.</p>
+              <div class="d-flex justify-content-between">
+                <strong>₹699</strong>
+                <a class="btn btn-sm btn-outline-light" href="#">Add</a>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+      
+          <div class="col-md-6 col-lg-4">
+          <div class="card menu-card p-3 h-100">
+          <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=1200&q=80" class="card-img-top" alt="Seared Sea Bass">
+            <div class="card-body">
+              <h5 class="card-title text-white">Truffle Fettuccine</h5>
+              <p class="small">Creamy truffle sauce, parmesan, chive oil.</p>
+              <div class="d-flex justify-content-between">
+                <strong>₹599</strong>
+                <a class="btn btn-sm btn-outline-light" href="#">Add</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+      <div class="col-lg-6">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=80" class="img-fluid rounded" alt="Our Restaurant">
+      </div>
+      <div class="col-lg-6">
+        <h2>About Royal Feast</h2>
+        <p>
+          At Royal Feast, we combine traditional flavors with modern culinary artistry to create dishes 
+          that delight all your senses. Our chefs use only the freshest ingredients to craft memorable 
+          dining experiences.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS + RESERVATION -->
+<section id="testimonials" class="py-5 bg-dark text-white">
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-lg-6">
+        <h2>What Our Guests Say</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <blockquote class="blockquote">
+                "Amazing food and ambiance! The sea bass was cooked to perfection."
+                <footer class="blockquote-footer text-white">— Priya S.</footer>
+              </blockquote>
+            </div>
+            <div class="carousel-item">
+              <blockquote class="blockquote">
+                "A truly royal dining experience. Highly recommended!"
+                <footer class="blockquote-footer text-white">— Rohit K.</footer>
+              </blockquote>
+            </div>
+            <div class="carousel-item">
+              <blockquote class="blockquote">
+                "The desserts are heavenly. Loved the Rose & Pistachio Kulfi!"
+                <footer class="blockquote-footer text-white">— Anjali M.</footer>
+              </blockquote>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <h2>Reserve a Table</h2>
+        <div class="card reserve-card p-4">
+          <form id="reserveForm" class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Phone</label>
+              <input type="tel" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Date</label>
+              <input type="date" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Time</label>
+              <input type="time" class="form-control" required>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Guests</label>
+              <select class="form-select">
+                <option value="1">1</option>
+                <option value="2" selected>2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5+</option>
+              </select>
+            </div>
+            <div class="col-12 text-end">
+              <button type="submit" class="btn btn-light">Request Reservation</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-4 bg-dark text-white text-center">
+  <p>&copy; <span id="year"></span> Royal Feast. All rights reserved.</p>
+  <p><a href="#hero" class="text-white">Back to top</a></p>
+</footer>
+
+<script>
+  // Background slideshow (if needed)
+  const bgImages = [
+    "url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=1600')",
+    "url('https://images.unsplash.com/photo-1551218808-94e220e084d2?w=1600')",
+    "url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600')"
+  ];
+  let bgIndex = 0;
+  const bgEl = document.querySelector('.hero');
+  function setBg(i){ bgEl.style.backgroundImage = bgImages[i]; }
+  function nextBg(){ bgIndex = (bgIndex + 1) % bgImages.length; setBg(bgIndex); }
+  setBg(bgIndex); setInterval(nextBg, 6000);
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const t=document.querySelector(a.getAttribute('href'));
+      if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
+    });
+  });
+
+  // Reservation form
+  document.getElementById('reserveForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const btn = this.querySelector('button[type="submit"]');
+    btn.disabled = true; btn.textContent='Requesting...';
+    setTimeout(()=>{
+      btn.disabled=false; btn.textContent='Request Reservation';
+      alert('Your reservation request has been received!');
+      this.reset();
+    },900);
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+{% endblock %}
